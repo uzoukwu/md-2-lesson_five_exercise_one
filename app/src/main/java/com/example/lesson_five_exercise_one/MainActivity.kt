@@ -2,17 +2,18 @@ package com.example.lesson_five_exercise_one
 
 import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), NewsListCallBack{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        rvNewsList.adapter = NewsAdapter(this, getNews())
+        rvNewsList.adapter = NewsAdapter(this, getNews(),this)
         rvNewsList.layoutManager = LinearLayoutManager(this)
 
     }
@@ -130,5 +131,10 @@ class MainActivity : AppCompatActivity() {
         ))
 
         return news
+
+    }
+
+    override fun onItemSelected(index: Int) {
+        Toast.makeText(this, "item selected: $index", Toast.LENGTH_LONG).show()
     }
 }

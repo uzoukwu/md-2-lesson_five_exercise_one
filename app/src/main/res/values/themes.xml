@@ -20,15 +20,13 @@
         <item name="android:textSize">20sp</item>
         <item name="fontFamily">@font/news_cycle_bold</item>
         <item name="android:layout_marginStart">8dp</item>
-        <item name="android:layout_marginTop">8dp</item>
     </style>
 
     <style name="subheader">
         <item name="android:textColor">@color/darkgray</item>
         <item name="android:textSize">14sp</item>
         <item name="fontFamily">@font/news_cycle</item>
-        <item name="android:layout_marginStart">16dp</item>
-        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginStart">16dp</item>>
     </style>
 
 </resources>
